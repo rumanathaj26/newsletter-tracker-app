@@ -9,17 +9,15 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
       - key: DATABASE_TYPE
-        value: mongodb
+        value: sqlite
+      - key: DATABASE_PATH
+        value: ./newsletter_data.db
+      - key: SESSION_SECRET
+        fromDatabase: false
       - key: SHOPIFY_SHOP_DOMAIN
         fromDatabase: false
       - key: SHOPIFY_ACCESS_TOKEN
         fromDatabase: false
       - key: SHOPIFY_API_SECRET
-        fromDatabase: false
-      - key: MONGODB_URI
-        fromDatabase: false
-      - key: SESSION_SECRET
         fromDatabase: false
