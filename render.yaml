@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: newsletter-tracker
+    env: node
+    plan: free
+    buildCommand: yarn install
+    startCommand: yarn start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_TYPE
+        value: mongodb
+      - key: SHOPIFY_SHOP_DOMAIN
+        fromDatabase: false
+      - key: SHOPIFY_ACCESS_TOKEN
+        fromDatabase: false
+      - key: SHOPIFY_API_SECRET
+        fromDatabase: false
+      - key: MONGODB_URI
+        fromDatabase: false
+      - key: SESSION_SECRET
+        fromDatabase: false
