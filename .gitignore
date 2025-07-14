@@ -1,10 +1,8 @@
 node_modules/
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 newsletter_data.db
 *.log
 .DS_Store
 .vscode/
+PRODUCTION_DEPLOYMENT.md
